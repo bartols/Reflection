@@ -1,0 +1,7 @@
+set(APP_BUNDLE tiny_xml)
+
+file(GLOB SOURCE *.cpp)
+add_library(${APP_BUNDLE} STATIC ${SOURCE})
+
+install(TARGETS ${APP_BUNDLE} EXPORT ${PROJECT_NAME} DESTINATION ${CMAKE_SOURCE_DIR}/lib)
+#export(TARGETS ${APP_BUNDLE} FILE ${CMAKE_BINARY_DIR}-config.cmake)
